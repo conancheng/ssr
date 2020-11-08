@@ -4,10 +4,12 @@
 name: v2ray
 
 on:
+  schedule:
+    - cron:  '* */6 * * *'
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches: [ master ] 
 
 jobs:
   build:
@@ -25,6 +27,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
         pip install lxml
-    - name: Test with pytest
+    - name: Test with v2ray
       run: |
-        python v2ray.py
+        python v2ray.py > v2ray.txt
