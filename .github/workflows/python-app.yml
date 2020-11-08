@@ -30,3 +30,8 @@ jobs:
     - name: Test with v2ray
       run: |
         python v2ray.py > v2ray.txt
+    - name: Upload output file
+      uses: actions/upload-artifact@v1
+      with:
+          name: v2ray-txt-file
+          path: v2ray.txt
