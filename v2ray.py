@@ -13,7 +13,7 @@ html = requests.get("https://view.freev2ray.org/")
 etree_html = etree.HTML(html.text)
 content = etree_html.xpath('//button[@class="copybtn"]/@data-clipboard-text')
 for each in content:
-    print(each)
+    each
 #vmess获取base64加密
 str_each = str(each)
 b64each = base64.b64encode(str_each.encode('utf-8'))
