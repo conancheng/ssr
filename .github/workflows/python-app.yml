@@ -30,8 +30,13 @@ jobs:
     - name: Test with v2ray
       run: |
         python v2ray.py > v2ray.txt
-    - name: Upload output file
-      uses: actions/upload-artifact@v1
+    - name: commit
+      run: |
+        git config --global user.email conancheng@qq.com
+        git config --global user.name conancheng
+        git add .
+        git commit -m "update" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
-          name: v2ray-txt-file
-          path: v2ray.txt
+        github_token: ${{ secrets.GITHUB_TOKEN }}
