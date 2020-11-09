@@ -1,4 +1,5 @@
 import requests
+import base64
 import lxml
 #import io
 from lxml import etree
@@ -13,6 +14,12 @@ etree_html = etree.HTML(html.text)
 content = etree_html.xpath('//button[@class="copybtn"]/@data-clipboard-text')
 for each in content:
     print(each)
+#vmess获取base64加密
+str_each = str(each)
+b64each = base64.b64encode(str_each.encode('utf-8'))
+print(str(b64each,'utf-8'))
+str_b64each = str(b64each,'utf-8')
+#保存加密后的文件到v2ray.txt
 file = open("v2ray.txt",'w')
-file.write(each)
+file.write(str_b64each)
 file.close()
