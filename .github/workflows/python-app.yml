@@ -35,7 +35,7 @@ jobs:
         git config --global user.email conancheng@qq.com
         git config --global user.name conancheng
         git add .
-        git commit --amend
+        git commit --amend -a
         git push -u origin master -f
     - name: Push changes
       uses: ad-m/github-push-action@master
