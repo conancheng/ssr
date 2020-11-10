@@ -3,13 +3,13 @@
 
 name: v2ray
 
-on:
-  schedule:
-    - cron:  '* */6 * * *'
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ] 
+ on:
+#    schedule:
+#      - cron:  '* */6 * * *'
+#   push:
+#     branches: [ master ]
+#   pull_request:
+#     branches: [ master ] 
 
 jobs:
   build:
