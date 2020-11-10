@@ -30,10 +30,11 @@ jobs:
     - name: Test with v2ray
       run: |
         python v2ray.py > v2ray.txt
-    - name: commit
+    - name: rm and commit
       run: |
         git config --global user.email conancheng@qq.com
         git config --global user.name conancheng
+        git rm v2ray.txt
         git add .
         git commit -m "update" -a
     - name: Push changes
