@@ -34,8 +34,8 @@ jobs:
       run: |
         git config --global user.email conancheng@qq.com
         git config --global user.name conancheng
-        python v2ray.py > v2ray.txt
         git add .
+        git commit --amend
         git push -u origin master -f
     - name: Push changes
       uses: ad-m/github-push-action@master
