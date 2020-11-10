@@ -36,6 +36,7 @@ jobs:
         git config --global user.name conancheng
         git add .
         git commit -m "update" -a
+        git push origin --delete master
         git push --force origin master
     - name: Push changes
       uses: ad-m/github-push-action@master
