@@ -34,9 +34,9 @@ jobs:
       run: |
         git config --global user.email conancheng@qq.com
         git config --global user.name conancheng
-        git rm v2ray.txt
-        git add .
-        git commit -m "update" -a
+#       git add .
+#       git commit -m "update" -a
+        git push origin master --force
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
