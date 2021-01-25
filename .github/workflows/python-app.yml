@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@master
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
@@ -30,14 +30,21 @@ jobs:
     - name: Test with v2ray
       run: |
         python v2ray.py > v2ray.txt
-    - name: commit
-      run: |
-        git config --global user.email conancheng@qq.com
-        git config --global user.name conancheng
-        git add .
-        git commit --amend -a
-        git push -u origin master -f
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: build
+        BUILD_SCRIPT: npm install && npm run build
+#    - name: commit
+#      run: |
+#       git config --global user.email conancheng@qq.com
+#       git config --global user.name conancheng
+#       git add .
+#       git commit --amend -a
+#       git push -u origin master -f
+#    - name: Push changes
+#      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
