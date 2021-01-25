@@ -33,14 +33,15 @@ jobs:
     - name: Test with v2ray
       run: |
         python v2ray.py > v2ray.txt
-#    - name: commit
-#      run: |
-#       git config --global user.email conancheng@qq.com
-#       git config --global user.name conancheng
-#       git add .
+    - name: commit
+      run: |
+       git config --global user.email conancheng@qq.com
+       git config --global user.name conancheng
+       git add .
+       git commit -m "update" -a
 #       git commit --amend -a
 #       git push -u origin master -f
-#    - name: Push changes
-#      uses: ad-m/github-push-action@master
-#      with:
-#        github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
