@@ -2,9 +2,9 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
 name: v2ray
-
- on:
- schedule:
+on:
+  push:
+  schedule:
   # 定时任务，在每6个小时推送一次链接到本地
     - cron: '* */6 * * *'
 #    schedule:
