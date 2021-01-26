@@ -7,6 +7,7 @@ on:
   schedule:
   # 定时任务，在每6个小时推送一次链接到本地
     - cron: '* */12 * * *'
+
 #    schedule:
 #      - cron:  '* */6 * * *'
 #   push:
