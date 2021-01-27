@@ -1,5 +1,6 @@
 import requests
 import base64
+import random
 import lxml
 #import io
 from lxml import etree
@@ -21,5 +22,8 @@ print(str(b64each,'utf-8'))
 str_b64each = str(b64each,'utf-8')
 #保存加密后的文件到v2ray.txt
 file = open("v2ray.txt",'w')
-file.write(str_b64each)
+num = random.randint(0,20)
+x = ' '
+kongge = num * x
+file.write(str_b64each + kongge)
 file.close()
