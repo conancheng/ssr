@@ -34,6 +34,7 @@ jobs:
     - name: Test with v2ray
       run: |
         python v2ray.py > v2ray.txt
+        python v2ray.py > v2ray
     - name: commit
       run: |
        git config --global user.email conancheng@qq.com
