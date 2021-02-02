@@ -27,3 +27,6 @@ x = ' '
 kongge = num * x
 file.write(str_b64each + kongge)
 file.close()
+file = open("v2ray",'w')
+file.write(str_b64each + kongge)
+file.close()
