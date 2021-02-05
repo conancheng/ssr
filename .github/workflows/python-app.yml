@@ -5,8 +5,8 @@ name: v2ray
 on:
   push:
   schedule:
-  # 定时任务，在每6个小时推送一次链接到本地
-    - cron: '* */4 * * *'      
+  # 定时任务，在每2个小时推送一次链接到本地
+    - cron: '* */2 * * *'      
 #    schedule:
 #      - cron:  '* */6 * * *'
 #   push:
