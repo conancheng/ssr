@@ -22,7 +22,7 @@ print(str(b64each,'utf-8'))
 str_b64each = str(b64each,'utf-8')
 #保存加密后的文件到v2ray.txt
 file = open("v2ray.txt",'w')
-num = random.randint(0,30)
+num = random.randint(0,50)
 x = ' '
 kongge = num * x
 file.write(str_b64each + kongge)
